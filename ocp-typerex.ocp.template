@@ -10,5 +10,5 @@ ocamlyacc = [OCP_BUILD_OCAMLYACC]
 cflags = [OCP_BUILD_CCOPT]
 (* ccopt = [] *)
 
-comp = [ "-g"; "-warn-error"; "A" ]
+comp = [ "-g"; "-warn-error"; "A-31" ]
 link = [ "-g" ]
