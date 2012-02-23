@@ -1,3 +1,8 @@
+NOTE of this branch `private'
+=============================
+This contains fixes for my personal mutated OCaml compiler. Probably nothing useful for the others.
+
+
 Requirements
 ============
 
