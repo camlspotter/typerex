@@ -12,10 +12,11 @@ if test "$OCAMLC" = "no"; then
 fi
 
 # Check that OCaml version is 3.11.2 or 3.12.1
-if test "$OCAMLVERSION" != "3.11.2" &&
-   test "$OCAMLVERSION" != "3.12.0" &&
-   test "$OCAMLVERSION" != "3.12.1" ; then
-  AC_MSG_ERROR([Your version of OCaml: $OCAMLVERSION is not supported])
+OCAMLVERSION_WITHOUT_EXTENSIONS=`echo $OCAMLVERSION | sed -e 's/+.*//'`
+if test "$OCAMLVERSION_WITHOUT_EXTENSIONS" != "3.11.2" &&
+   test "$OCAMLVERSION_WITHOUT_EXTENSIONS" != "3.12.0" &&
+   test "$OCAMLVERSION_WITHOUT_EXTENSIONS" != "3.12.1" ; then
+  AC_MSG_ERROR([Your version of OCaml: $OCAMLVERSION ($OCAMLVERSION_WITHOUT_EXTENSIONS) is not supported])
 fi
 
 # Checking for existing ocp-type and ocp-wrapper
